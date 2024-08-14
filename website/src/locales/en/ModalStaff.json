@@ -83,6 +83,18 @@
         "Vàng": "Gold",
         "Kim cương": "Diamond",
         "Bạch kim": "Platinum",
-        "Chi tiết": "Detail"
+        "Chi tiết": "Detail",
+        "Đã gửi định giá tài sản thành công": "Successfully sent asset valuation",
+        "Gửi định giá thất bại": "Failed to send valuation",
+        "Đã hủy yêu cầu định giá tài sản": "Cancelled asset valuation request",
+        "Trạng thái chưa thể cập nhật, hủy yêu cầu đấu giá thất bại": "Status cannot be updated, failed to cancel auction request",
+        "Xác nhận bàn giao": "Confirm handover",
+        "Hãy đảm bảo rằng giao dịch đã hoàn tất và biên bản đã được hoàn thành.": "Make sure the transaction is complete and the minutes are completed.",
+        "Xác nhận hoàn tất" : "Confirmation completed",
+        "Trạng thái chưa thể cập nhật, xác nhận thất bại": "Status cannot be updated, confirmation failed",
+        "Giao dịch cho phiên đấu này chưa được thanh toán từ người trúng đấu giá": "The transaction for this auction session has not been paid by the winning bidder"
+
+
+
     }
 }

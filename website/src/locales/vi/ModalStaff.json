@@ -85,6 +85,18 @@
         "Chi tiết": "Chi tiết",
         "Tài sản hoàn trả": "Tài sản hoàn trả",
         "2.Thông tin chủ tài sản": "2.Thông tin chủ tài sản",
-        "Tiến hành hoàn trả": "Tiến hành hoàn trả"
+        "Tiến hành hoàn trả": "Tiến hành hoàn trả",
+        "Đã gửi định giá tài sản thành công": "Đã gửi định giá tài sản thành công",
+        "Gửi định giá thất bại": "Gửi định giá thất bại",
+        "Đã hủy yêu cầu định giá tài sản": "Đã hủy yêu cầu định giá tài sản",
+        "Trạng thái chưa thể cập nhật, hủy yêu cầu đấu giá thất bại": "Trạng thái chưa thể cập nhật, hủy yêu cầu đấu giá thất bại",
+        "Xác nhận bàn giao" : "Xác nhận",
+        "Hãy đảm bảo rằng giao dịch đã hoàn tất và biên bản đã được hoàn thành.": "Hãy đảm bảo rằng giao dịch đã hoàn tất và biên bản đã được hoàn thành.",
+        "Xác nhận hoàn tất" : "Xác nhận hoàn tất",
+        "Trạng thái chưa thể cập nhật, xác nhận thất bại": "Trạng thái chưa thể cập nhật, xác nhận thất bại",
+        "Giao dịch cho phiên đấu này chưa được thanh toán từ người trúng đấu giá": "Giao dịch cho phiên đấu này chưa được thanh toán từ người trúng đấu giá"
+
+        
+
     }
 }

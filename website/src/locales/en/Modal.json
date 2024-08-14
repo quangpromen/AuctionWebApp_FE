@@ -170,7 +170,18 @@
         "Nhập lý do...": "Enter reason...",
         "Bạn cần nhập lý do!": "You need to enter a reason!",
         "Xóa thất bại." : "Delete failed.",
-        "Gửi": "Send"
+        "Gửi": "Send",
+        "Mã giao dịch": "Transaction code",
+        "Mã ngân hàng": "Bank code",
+        "Trạng thái chưa thể cập nhật, xác nhận thất bại": "Status cannot be updated, confirmation failed",
+        "Xác nhật giao dịch tại quầy": "Confirm counter transaction",
+        "Phiên đấu trước đó" : "Previous auction session",
+        "Giá hiện tại": "Current price",
+        "Mô tả sản phẩm": "Product description",
+        "Giá cuối": "Final price",
+        "Mô tả trang sức": "Jewelry description"
+        
+        
        
        
     }
