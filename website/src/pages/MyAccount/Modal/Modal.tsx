@@ -233,14 +233,14 @@ export const ViewTransactionModal: React.FC<ViewTransactionModalProps> = ({
                         {transaction.state === "SUCCEED" && (
                           <>
                             <div className="checkout-form-list mb-2">
-                              <label>Mã giao dịch: </label>
+                              <label>{t("Modal.Mã giao dịch")}: </label>
                               <span className="fw-bold">
                                 {" "}
                                 {transaction.transactionCode}
                               </span>
                             </div>
                             <div className="checkout-form-list mb-2">
-                              <label>Mã ngân hàng: </label>
+                              <label>{t("Modal.Mã ngân hàng")}: </label>
                               <span className="fw-bold">
                                 {" "}
                                 {transaction.bankCode}
@@ -643,7 +643,7 @@ export const ConfirmPayAtCounterTransactionModal: React.FC<
       Swal.fire({
         position: "center",
         icon: "success",
-        title: "Xác nhật giao dịch tại quầy",
+        title: t("Modal.Xác nhật giao dịch tại quầy"),
         showConfirmButton: false,
         timer: 1500,
       });
@@ -653,7 +653,7 @@ export const ConfirmPayAtCounterTransactionModal: React.FC<
       Swal.fire({
         position: "center",
         icon: "error",
-        title: "Trạng thái chưa thể cập nhật, Xác nhận thất bại",
+        title: t("Modal.Trạng thái chưa thể cập nhật, xác nhận thất bại"),
         showConfirmButton: false,
         timer: 1500,
       });
@@ -829,7 +829,7 @@ export const ConfirmModal: React.FC<JewelryModalProps> = ({
       Swal.fire({
         position: "center",
         icon: "error",
-        title: "Trạng thái chưa thể cập nhật, xác nhận thất bại",
+        title: t("Modal.Trạng thái chưa thể cập nhật, xác nhận thất bại"),
         showConfirmButton: false,
         timer: 1500,
       });
@@ -947,6 +947,7 @@ export const RefuseJewelryRequestModal: React.FC<RefuseJewelryModalProps> = ({
     setShow(false);
   };
   const handleShow = () => setShow(true);
+
   const handleDelete = async () => {
     try {
       if (user) {
@@ -959,7 +960,7 @@ export const RefuseJewelryRequestModal: React.FC<RefuseJewelryModalProps> = ({
           Swal.fire({
             position: "center",
             icon: "success",
-            title: "Xác nhận thành công",
+            title: t("Modal.Xác nhận thành công"),
             showConfirmButton: false,
             timer: 1500,
           });
@@ -968,16 +969,16 @@ export const RefuseJewelryRequestModal: React.FC<RefuseJewelryModalProps> = ({
           Swal.fire({
             position: "center",
             icon: "error",
-            title: "Trạng thái chưa thể cập nhật, xác nhận thất bại",
+            title: t("Modal.Trạng thái chưa thể cập nhật, xác nhận thất bại"),
             showConfirmButton: false,
             timer: 1500,
           });
-          console.log("Xóa thất bại");
+          console.log(t("Modal.Xóa thất bại"));
         }
       }
       handleClose();
     } catch (error) {
-      console.log("Xóa thất bại");
+      console.log(t("Modal.Xóa thất bại"));
     }
   };
 
@@ -1057,6 +1058,7 @@ export const ViewJewelryRequestModal: React.FC<MyRequestProps> = ({
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const { t } = useTranslation(["Modal"]);
+
   return (
     <>
       <Button variant="dark" size="sm" onClick={handleShow}>
@@ -1104,7 +1106,7 @@ export const ViewJewelryRequestModal: React.FC<MyRequestProps> = ({
                       </div>
                       <div className="checkout-form-list mb-2 row">
                         <div className="col-md-6  mb-2 ">
-                          <label>{t("Modal.Danh mục")}</label>
+                          <label>{t("Modal.Danh mục")}:</label>
                           <span className="fw-bold">
                             {" "}
                             {request.jewelry?.category?.name}
@@ -1118,7 +1120,7 @@ export const ViewJewelryRequestModal: React.FC<MyRequestProps> = ({
                           </span>
                         </div>
                         <div className="col-md-6">
-                          <label>{t("Modal.Chất liệu")}</label>
+                          <label>{t("Modal.Chất liệu")}:</label>
                           <span className="fw-bold">
                             {" "}
                             <JewelryMaterialView
@@ -1241,10 +1243,11 @@ export const MyJewelryModal: React.FC<MyJewelryModalProps> = ({
   const [show, setShow] = useState(false);
   const handleCloseJewelryDetail = () => setShow(false);
   const handleShowJewelryDetail = () => setShow(true);
+  const { t } = useTranslation(["Modal"]);
   return (
     <>
       <Button variant="dark" size="sm" onClick={handleShowJewelryDetail}>
-        Xem
+        {t("Modal.Xem")}
       </Button>
       {show && (
         <div className="overlay">
@@ -1257,7 +1260,9 @@ export const MyJewelryModal: React.FC<MyJewelryModalProps> = ({
           >
             <Modal.Header>
               <Modal.Title className="w-100">
-                <div className="col-12 text-center">Thông tin tài sản</div>
+                <div className="col-12 text-center">
+                  {t("Modal.Thông tin tài sản")}
+                </div>
                 <div className="col-12 mb-3 text-center ">
                   <span className="text-warning fw-bold">{jewelry?.name}</span>
                 </div>
@@ -1268,33 +1273,35 @@ export const MyJewelryModal: React.FC<MyJewelryModalProps> = ({
                 <div className="checkbox-form">
                   <div className="row">
                     <div className="col-md-12 fw-medium">
-                      <h4 className=" fw-medium">Thông tin tài sản</h4>
+                      <h4 className=" fw-medium">
+                        {t("Modal.Thông tin tài sản")}
+                      </h4>
                       <div className="checkout-form-list mb-2">
-                        <label>Mã tài sản: </label>
+                        <label>{t("Modal.Mã tài sản")}:</label>
                         <span className="fw-bold"> {jewelry?.id}</span>
                       </div>
                       <div className="checkout-form-list mb-2">
-                        <label>Tên:</label>
+                        <label>{t("Modal.Tên")}:</label>
                         <span className="fw-bold"> {jewelry?.name}</span>
                       </div>
                       <div className="checkout-form-list mb-2 row">
                         <div className="col-md-6 mb-2">
-                          <label>Thương hiệu:</label>
+                          <label>{t("Modal.Thương hiệu")}</label>
                           <span className="fw-bold"> {jewelry?.brand}</span>
                         </div>
                         <div className="col-md-6">
-                          <label>Chất liệu:</label>
+                          <label>{t("Modal.Chất liệu")}:</label>
                           <JewelryMaterialView
                             material={jewelry?.material ?? ""}
                           />
                         </div>
                         <div className="col-md-6">
-                          <label>Trọng lượng (g):</label>
+                          <label>{t("Modal.Trọng lượng (g)")}:</label>
                           <span className="fw-bold"> {jewelry?.weight}</span>
                         </div>
                       </div>
                       <div className="checkout-form-list checkout-form-list-2 mb-2">
-                        <label>Mô tả sản phẩm </label>
+                        <label>{t("Modal.Mô tả sản phẩm")} </label>
                         <br />
                         <textarea
                           readOnly
@@ -1306,11 +1313,14 @@ export const MyJewelryModal: React.FC<MyJewelryModalProps> = ({
                       </div>
                       <div className="w-100 fw-medium">
                         <div className="checkout-form-list row">
-                          <label>Hình ảnh</label>
+                          <label>{t("Modal.Hình ảnh")}</label>
                           {React.Children.toArray(
                             images.map((img: Image) => (
                               <div className="col-md-3">
-                                <img src={img.data} alt="Ảnh sản phẩm" />
+                                <img
+                                  src={img.data}
+                                  alt={t("Modal.Ảnh sản phẩm")}
+                                />
                               </div>
                             ))
                           )}
@@ -1320,20 +1330,24 @@ export const MyJewelryModal: React.FC<MyJewelryModalProps> = ({
                     {auction && (
                       <div className="col-md-12 fw-medium">
                         {jewelry?.state !== "AUCTION" ? (
-                          <h4 className=" fw-medium"> Phiên đấu trước đó</h4>
+                          <h4 className=" fw-medium">
+                            {t("Modal.Phiên đấu trước đó")}{" "}
+                          </h4>
                         ) : (
-                          <h4 className=" fw-medium"> Phiên đấu</h4>
+                          <h4 className=" fw-medium">
+                            {t("Modal.Phiên đấu giá")}{" "}
+                          </h4>
                         )}
                         <div className="checkout-form-list mb-2">
-                          <label>Mã phiên: </label>
+                          <label>{t("Modal.Mã phiên")} </label>
                           <span className="fw-bold"> {auction?.id}</span>
                         </div>
                         <div className="checkout-form-list mb-2">
-                          <label>Tên:</label>
+                          <label>{t("Modal.Tên")}:</label>
                           <span className="fw-bold"> {auction?.name}</span>
                         </div>
                         <div className="checkout-form-list mb-2 ">
-                          <label>Bắt đầu:</label>
+                          <label>{t("Modal.Bắt đầu")}</label>
                           <span className="fw-bold">
                             {" "}
                             {formatDateStringAcceptNull(
@@ -1342,7 +1356,7 @@ export const MyJewelryModal: React.FC<MyJewelryModalProps> = ({
                           </span>
                         </div>
                         <div className="checkout-form-list mb-2">
-                          <label>Kết thúc:</label>
+                          <label>{t("Modal.Kết thúc")}</label>
                           <span className="fw-bold">
                             {" "}
                             {formatDateStringAcceptNull(
@@ -1351,14 +1365,14 @@ export const MyJewelryModal: React.FC<MyJewelryModalProps> = ({
                           </span>
                         </div>
                         <div className="checkout-form-list mb-2">
-                          <label>Trạng thái: </label>
+                          <label>{t("Modal.Trạng thái")}: </label>
 
                           <span className="fw-bold text-uppercase text-success">
                             {" "}
                             {auction.state === "FINISHED" &&
                             auction.lastPrice === null ? (
                               <span className="text-danger fw-bold">
-                                Đấu giá thất bại
+                                {t("Modal.Đấu giá thất bại")}
                               </span>
                             ) : (
                               <StateAuctionView
@@ -1371,7 +1385,7 @@ export const MyJewelryModal: React.FC<MyJewelryModalProps> = ({
                         </div>
                         {auction.state === "FINISHED" ? (
                           <div className="checkout-form-list mb-2">
-                            <label>Giá cuối:</label>
+                            <label>{t("Modal.Giá cuối")}:</label>
                             <span className="fw-bold text-uppercase text-danger">
                               {" "}
                               {formatNumberAcceptNull(auction?.lastPrice)
@@ -1382,7 +1396,7 @@ export const MyJewelryModal: React.FC<MyJewelryModalProps> = ({
                           </div>
                         ) : (
                           <div className="checkout-form-list mb-2">
-                            <label>Giá hiện tại:</label>
+                            <label>{t("Modal.Giá hiện tại")}:</label>
                             <span className="fw-bold text-uppercase text-danger">
                               {" "}
                               {formatNumberAcceptNull(auction?.lastPrice)
@@ -1400,7 +1414,7 @@ export const MyJewelryModal: React.FC<MyJewelryModalProps> = ({
             </Modal.Body>
             <Modal.Footer>
               <Button variant="dark" onClick={handleCloseJewelryDetail}>
-                Đóng
+                {t("Modal.Đóng")}
               </Button>
             </Modal.Footer>
           </Modal>
